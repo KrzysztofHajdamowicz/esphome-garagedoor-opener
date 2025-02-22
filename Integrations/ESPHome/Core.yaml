@@ -20,6 +20,10 @@ binary_sensor:
     name: Online
     id: ink_ha_connected
 
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+
 sensor:
   - platform: internal_temperature
     name: "ESP Temperature"
@@ -29,7 +33,8 @@ sensor:
   - platform: uptime
     name: Uptime
     id: sys_uptime
-    update_interval: 60s
+    type: timestamp
+
 
   - platform: wifi_signal
     name: RSSI
