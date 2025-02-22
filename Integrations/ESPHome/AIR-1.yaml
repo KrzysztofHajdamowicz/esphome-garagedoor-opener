@@ -23,7 +23,7 @@ ota:
 
 wifi:
   ap:
-    ssid: "Apollo AIR1 Hotspot"
+    ssid: "GDoor Hotspot"
 
 packages:
   core: !include Core.yaml
