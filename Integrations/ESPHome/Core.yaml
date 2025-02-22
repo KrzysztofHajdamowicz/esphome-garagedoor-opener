@@ -1,0 +1,48 @@
+substitutions:
+  name: garagedoor-opener
+  version: "25.8.1.1"
+  device_description: ${name} made by Krzysztof Hajdamowicz - version ${version}.
+
+esp32:
+  board: esp-wrover-kit
+  framework:
+    type: esp-idf
+
+api:
+
+captive_portal:
+
+logger:
+  level: DEBUG
+
+binary_sensor:
+  - platform: status
+    name: Online
+    id: ink_ha_connected
+
+sensor:
+  - platform: internal_temperature
+    name: "ESP Temperature"
+    id: sys_esp_temperature
+    entity_category: "diagnostic"
+
+  - platform: uptime
+    name: Uptime
+    id: sys_uptime
+    update_interval: 60s
+
+  - platform: wifi_signal
+    name: RSSI
+    id: wifi_signal_db
+    update_interval: 60s
+    entity_category: "diagnostic"
+
+button:
+  - platform: restart
+    icon: mdi:power-cycle
+    name: "ESP Reboot"
+
+  - platform: factory_reset
+    disabled_by_default: True
+    name: "Factory Reset ESP"
+    id: factory_reset_all

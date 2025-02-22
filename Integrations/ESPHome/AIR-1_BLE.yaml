@@ -1,0 +1,30 @@
+esphome:
+  name: "${name}"
+  friendly_name: KHajd garagedoor-opener
+  comment: KHajd garagedoor-opener
+  name_add_mac_suffix: true
+  platformio_options:
+    board_build.flash_mode: dio
+
+  project:
+    name: "KHajd.gdoor-opener"
+    version: "${version}"
+
+  min_version: 2025.2.0
+
+dashboard_import:
+  package_import_url: github://KrzysztofHajdamowicz/esphome-garagedoor-opener/Integrations/ESPHome/AIR-1_BLE.yaml
+  import_full_config: false
+
+ota:
+  - platform: esphome
+    password: "dupa.9"
+    id: ota_esphome
+
+wifi:
+  ap:
+    ssid: "KHajd GDoor Hotspot"
+
+packages:
+  core: !include Core.yaml
+  ble: !include ble.yaml
