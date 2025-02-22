@@ -2,7 +2,7 @@ name: Publish
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
     inputs:
       version:
@@ -14,7 +14,7 @@ on:
 jobs:
   build-firmware:
     name: Build And Release
-    uses: esphome/workflows/.github/workflows/build.yml@main
+    uses: esphome/workflows/.github/workflows/build.yml@master
     with:
       files: |
         Integrations/ESPHome/AIR-1_Factory.yaml
