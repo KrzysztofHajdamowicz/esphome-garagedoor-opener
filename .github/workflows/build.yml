@@ -14,7 +14,7 @@ on:
 jobs:
   build-firmware:
     name: Build And Release
-    uses: esphome/workflows/.github/workflows/build.yml@master
+    uses: esphome/workflows/.github/workflows/build.yml@main
     with:
       files: |
         Integrations/ESPHome/AIR-1_Factory.yaml
