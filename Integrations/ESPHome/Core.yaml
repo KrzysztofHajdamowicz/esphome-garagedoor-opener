@@ -34,6 +34,7 @@ sensor:
     name: Uptime
     id: sys_uptime
     type: timestamp
+    device_class: timestamp
 
 
   - platform: wifi_signal
