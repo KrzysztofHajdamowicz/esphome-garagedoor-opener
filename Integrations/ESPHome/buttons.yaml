@@ -18,3 +18,33 @@ switch:
     pin: GPIO5
     id: K4_switch
     name: K4
+
+button:
+  - platform: template
+    name: K1_button
+    icon: "mdi: remote"
+    on_press:
+      - switch.turn_on: K1_switch
+      - delay: 500ms
+      - switch.turn_off: K1_switch
+  - platform: template
+    name: K2_button
+    icon: "mdi: remote"
+    on_press:
+      - switch.turn_on: K2_switch
+      - delay: 500ms
+      - switch.turn_off: K2_switch
+  - platform: template
+    name: K3_button
+    icon: "mdi: remote"
+    on_press:
+      - switch.turn_on: K3_switch
+      - delay: 500ms
+      - switch.turn_off: K3_switch
+  - platform: template
+    name: K4_button
+    icon: "mdi: remote"
+    on_press:
+      - switch.turn_on: K4_switch
+      - delay: 500ms
+      - switch.turn_off: K4_switch
